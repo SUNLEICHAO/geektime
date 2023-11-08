@@ -1,0 +1,16 @@
+{
+  "id": "4321526",
+  "name": "time",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "831601",
+      "name": "arrow",
+      "font_class": "arrow",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    }
+  ]
+}
