@@ -32,8 +32,9 @@
         </a>
 
         <a class="header-nav-item" href="javascript:;">
-          <span class="header-nav-item__name">年卡</span>
-          <i class="header-nav-item__vip "></i>
+          <!-- <span class="header-nav-item__name">年卡</span> -->
+          <!-- <i class="header-nav-item__icon-vip "></i> -->
+          <img class="header-nav-item__vip" src="./img/icon-vip2.webp" alt="">
         </a>
         <a class="header-nav-item" href="javascript:;">
           <span class="header-nav-item__name">部落</span>
@@ -59,8 +60,8 @@
           <i class="header-search-btn__icon"></i>
           <span class="header-search-btn__text">搜索</span>
         </a>
-
       </div>
+
       <div class="header-login">
         <a class="header-login-up" href="javascript:;">登录</a>
         <a class="header-login-in" href="javascript:;">注册</a>
@@ -70,6 +71,7 @@
         <div class="header-ai-img"></div>
         <i class="header-ai-icon"></i>
       </div>
+      
     </div>
   </header>
 
@@ -80,31 +82,31 @@
         <ul class="banner-menu-list">
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">后端/架构</a>
-            <span class="menu-item-content">Java/Go/Python</span>
+            <span class="menu-item-content text-ellipsis">Java/Go/Python</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">前端/移动</a>
-            <span class="menu-item-content">JavaScript/iOS/Android</span>
+            <span class="menu-item-content text-ellipsis">JavaScript/iOS/Android</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">计算机基础</a>
-            <span class="menu-item-content">算法/网络/数据库</span>
+            <span class="menu-item-content text-ellipsis">算法/网络/数据库</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">AI/大数据</a>
-            <span class="menu-item-content">NLP/机器学习/数据分析</span>
+            <span class="menu-item-content text-ellipsis">NLP/机器学习/数据分析</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">运维/测试</a>
-            <span class="menu-item-content">CI/CD/云计算/测试</span>
+            <span class="menu-item-content text-ellipsis">CI/CD/云计算/测试</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">产品/运营</a>
-            <span class="menu-item-content">产品创新/增长/运营</span>
+            <span class="menu-item-content text-ellipsis">产品创新/增长/运营</span>
           </li>
           <li class="banner-menu-item">
             <a href="javascript:;" class="menu-item-title">管理/成长</a>
-            <span class="menu-item-content">研发效能/团队管理/个人成长</span>
+            <span class="menu-item-content text-ellipsis">研发效能/团队管理/个人成长</span>
           </li>
         </ul>
       </div>
@@ -119,6 +121,7 @@
           <li class="indicator-item"></li>
           <li class="indicator-item"></li>
           <li class="indicator-item"></li>
+          <li class="indicator-item"></li>
         </ul>
       </div>
       <div class="banner-user">
@@ -128,7 +131,10 @@
           <img class="banner-user-benefit__img" src="./img/benefit.webp" alt="">
         </div>
         <a class="banner-user-login" href="javascript:;">登录 / 注册</a>
-        <a class="banner-user-download" href="javascript:;">下载 App 学习></a>
+        <a class="banner-user-download" href="javascript:;">
+          下载 App 学习
+          <span class="iconfont arrow">&#xe625;</span>
+        </a>
       </div>
     </div>
     <!-- 推荐的卡片 -->
@@ -255,10 +261,10 @@
           <div class="hot-learning-item">
             <div class="hot-learning-item__cover course-mysql"></div>
             <div class="hot-learning-item__info">
-              <div class="learning-item-title font-course-title">MySQL 实战 45 讲</div>
+              <div class="learning-item-title font-course-title text-ellipsis">MySQL 实战 45 讲</div>
               <div class="learning-item-teacher">
-                <div class="learning-item-teacher__name">林晓斌</div>
-                <div class="learning-item-teacher__about">网名丁奇，前腾讯云数据库负责人</div>
+                <div class="learning-item-teacher__name text-ellipsis">林晓斌</div>
+                <div class="learning-item-teacher__about text-ellipsis">网名丁奇，前腾讯云数据库负责人</div>
               </div>
               <div class="learning-item-about">49讲｜221171 人已学习 </div>
               <div class="learning-item-price">
@@ -278,10 +284,10 @@
           <div class="hot-learning-item">
             <div class="hot-learning-item__cover teacher-ch"></div>
             <div class="hot-learning-item__info">
-              <div class="learning-item-title font-course-title">左耳听风</div>
+              <div class="learning-item-title font-course-title text-ellipsis">左耳听风</div>
               <div class="learning-item-teacher">
-                <div class="learning-item-teacher__name">陈皓</div>
-                <div class="learning-item-teacher__about">网名“左耳朵耗子”，资深技术专家</div>
+                <div class="learning-item-teacher__name text-ellipsis">陈皓</div>
+                <div class="learning-item-teacher__about text-ellipsis">网名“左耳朵耗子”，资深技术专家</div>
               </div>
               <div class="learning-item-about">119讲｜176479 人已学习 </div>
               <div class="learning-item-price">
@@ -299,10 +305,10 @@
           <div class="hot-learning-item">
             <div class="hot-learning-item__cover teacher-wz"></div>
             <div class="hot-learning-item__info">
-              <div class="learning-item-title font-course-title">数据结构与算法之美</div>
+              <div class="learning-item-title font-course-title text-ellipsis">数据结构与算法之美</div>
               <div class="learning-item-teacher">
-                <div class="learning-item-teacher__name">王争</div>
-                <div class="learning-item-teacher__about">前 Google 工程师</div>
+                <div class="learning-item-teacher__name text-ellipsis">王争</div>
+                <div class="learning-item-teacher__about text-ellipsis">前 Google 工程师</div>
               </div>
               <div class="learning-item-about">81讲｜280535 人已学习 </div>
               <div class="learning-item-price">
@@ -320,10 +326,10 @@
           <div class="hot-learning-item">
             <div class="hot-learning-item__cover teacher-wz"></div>
             <div class="hot-learning-item__info">
-              <div class="learning-item-title font-course-title">设计模式之美</div>
+              <div class="learning-item-title font-course-title text-ellipsis">设计模式之美</div>
               <div class="learning-item-teacher">
-                <div class="learning-item-teacher__name">王争</div>
-                <div class="learning-item-teacher__about">前 Google 工程师，《数据结构与算法之美》专栏作者</div>
+                <div class="learning-item-teacher__name text-ellipsis">王争</div>
+                <div class="learning-item-teacher__about text-ellipsis">前 Google 工程师，《数据结构与算法之美》专栏作者</div>
               </div>
               <div class="learning-item-about">113讲｜120903 人已学习 </div>
               <div class="learning-item-price">
@@ -352,31 +358,31 @@
           <div class="hot-hotsale-list">
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">1</div>
-              <div class="hot-hotsale-item__name">MySQL实战45讲</div>
+              <div class="hot-hotsale-item__name text-ellipsis">MySQL实战45讲</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">2</div>
-              <div class="hot-hotsale-item__name">左耳听风</div>
+              <div class="hot-hotsale-item__name text-ellipsis">左耳听风</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">3</div>
-              <div class="hot-hotsale-item__name">数据结构与算法之美</div>
+              <div class="hot-hotsale-item__name text-ellipsis">数据结构与算法之美</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">4</div>
-              <div class="hot-hotsale-item__name">设计模式之美</div>
+              <div class="hot-hotsale-item__name text-ellipsis">设计模式之美</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">5</div>
-              <div class="hot-hotsale-item__name">深入剖析Kubernetes</div>
+              <div class="hot-hotsale-item__name text-ellipsis">深入剖析Kubernetes</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">6</div>
-              <div class="hot-hotsale-item__name">Rust 语言从入门到实战</div>
+              <div class="hot-hotsale-item__name text-ellipsis">Rust 语言从入门到实战</div>
             </div>
             <div class="hot-hotsale-item">
               <div class="hot-hotsale-item__num">7</div>
-              <div class="hot-hotsale-item__name">LangChain 实战课</div>
+              <div class="hot-hotsale-item__name text-ellipsis">LangChain 实战课</div>
             </div>
           </div>
         </div>
@@ -386,7 +392,7 @@
     <!-- 学习路径 -->
     <div class="learnpath-section">
       <div class="learnpath-title">
-        <div class="learnpath-title__text title">学习路径</div>
+        <div class="learnpath-title__text title text-ellipsis">学习路径</div>
         <div class="learnpath-title__desc desc">
           全部18个
           <span class="iconfont arrow">&#xe625;</span>
@@ -402,7 +408,7 @@
               <img class="learnpath-item-cover__img" src="./img/learnpath-bigmodel.webp" alt="">
             </div>
             <div class="learnpath-item-info">
-              <div class="learnpath-item-info__title title">AI大模型前沿知识</div>
+              <div class="learnpath-item-info__title title text-ellipsis">AI大模型前沿知识</div>
               <div class="learnpath-item-info__desc desc">10门课程</div>
             </div>
           </div>
@@ -411,7 +417,7 @@
               <img class="learnpath-item-cover__img" src="./img/learnpath-java.webp" alt="">
             </div>
             <div class="learnpath-item-info">
-              <div class="learnpath-item-info__title title">Java工程师</div>
+              <div class="learnpath-item-info__title title text-ellipsis">Java工程师</div>
               <div class="learnpath-item-info__desc desc">29门课程</div>
             </div>
           </div>
@@ -420,7 +426,7 @@
               <img class="learnpath-item-cover__img" src="./img/learnpath-framework.webp" alt="">
             </div>
             <div class="learnpath-item-info">
-              <div class="learnpath-item-info__title title">架构师</div>
+              <div class="learnpath-item-info__title title text-ellipsis">架构师</div>
               <div class="learnpath-item-info__desc desc">28门课程</div>
             </div>
           </div>
@@ -429,7 +435,7 @@
               <img class="learnpath-item-cover__img" src="./img/learnpath-om.webp" alt="">
             </div>
             <div class="learnpath-item-info">
-              <div class="learnpath-item-info__title title">运维工程师</div>
+              <div class="learnpath-item-info__title title text-ellipsis">运维工程师</div>
               <div class="learnpath-item-info__desc desc">32门课程</div>
             </div>
           </div>
@@ -438,7 +444,7 @@
               <img class="learnpath-item-cover__img" src="./img/learnpath-ml.webp" alt="">
             </div>
             <div class="learnpath-item-info">
-              <div class="learnpath-item-info__title title">机器学习工程师</div>
+              <div class="learnpath-item-info__title title text-ellipsis">机器学习工程师</div>
               <div class="learnpath-item-info__desc desc">13门课程</div>
             </div>
           </div>

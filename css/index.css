@@ -54,8 +54,8 @@ a {
 .font-module-title {
   font-size: 22px;
   font-weight: 600;
-  line-height: 1.35;
   color: #404040;
+  line-height: 1.35;
 }
 
 .font-module-subtitle {
@@ -66,14 +66,10 @@ a {
 .font-course-title {
   font-size: 20px;
   font-weight: 500;
-  line-height: 28px;
   color: #4c4c4c;
-  text-overflow: ellipsis;
-  transition: color .2s ease;
-
-  overflow: hidden;
-  white-space: nowrap;
+  line-height: 28px;
   cursor: pointer;
+  transition: color .2s ease;
 }
 
 /* 以上为相对通用选择器 */
@@ -98,8 +94,8 @@ a {
 
 .header-container {
   position: relative;
-  left: 50%;
   align-items: center;
+  left: 50%;
   display: flex;
   margin-left: -600px;
   background-color: #fff;
@@ -120,9 +116,13 @@ a {
 }
 
 .header-nav {
+  /* 问题，这里需要手动下移，因为原上14下15，而我是上15下14 */
+  position: relative;
+  top: -1px;
   align-items: center;
   display: flex;
   margin-left: 21px;
+  height: 37px;
 }
 
 .header-nav-item {
@@ -147,7 +147,7 @@ a {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 0 4px;
+  margin: 0 5px 0 4px;
   background-image: url(../img/arrow-down.svg);
   background-size: 10px;
   transform: rotate(0deg);
@@ -165,7 +165,7 @@ a {
   height: 10px;
 }
 
-.header-nav-item__vip {
+.header-nav-item__icon-vip {
   position: absolute;
   top: 10px;
   right: -3px;
@@ -173,6 +173,11 @@ a {
   height: 7px;
   background-image: url(../img/icon-vip.webp);
   background-size: 18px 7px;
+}
+
+.header-nav-item__vip {
+  width: 38px;
+  transform: translateY(0px);
 }
 
 .header-nav-item__infop {
@@ -198,31 +203,36 @@ a {
   width: 283px;
   height: 34px;
   margin: 0 20px;
-  border: 1px solid #fa8919;
   overflow: hidden;
   border-radius: 8px;
+  border: 1px solid #fa8919;
 }
 
 .header-search-input {
+  flex: 1;
+  padding: 0;
   margin: 0 15px;
+  outline: none;
   border: none;
   background-color: transparent;
-  outline: none;
-  flex: 1;
-  margin: 0 15px;
+}
+
+.header-search-input::placeholder {
+  font-size: 12px;
+  color: #b2b2b2;
 }
 
 .header-search-btn {
+  align-items: center;
+  justify-content: center;
   display: flex;
   width: 70px;
   font-size: 14px;
   font-weight: 500;
+  color: #fff;
   line-height: 34px;
   text-align: center;
-  align-items: center;
-  justify-content: center;
   background-color: #fa8919;
-  color: #fff;
 }
 
 .header-search-btn__icon {
@@ -231,19 +241,19 @@ a {
   height: 18px;
   background-image: url(../img/search-white.svg);
   background-size: 18px;
-
 }
 
 .header-login {
   display: flex;
+  margin-top: 3px;
 }
 
 .header-login-up,
 .header-login-in {
-  color: #888;
-  font-size: 16px;
   display: block;
+  font-size: 16px;
   font-weight: 500;
+  color: #888;
   cursor: pointer;
 }
 
@@ -255,7 +265,8 @@ a {
 
 .header-ai {
   position: relative;
-  margin-left: 12px;
+  top: 2px;
+  left: 13px;
 }
 
 .header-ai-img {
@@ -267,9 +278,8 @@ a {
 
 .header-ai-icon {
   position: absolute;
-  left: 25px;
+  left: 23px;
   bottom: 26px;
-  /* top: 0; */
   display: block;
   width: 24px;
   height: 16px;
@@ -283,15 +293,13 @@ a {
 }
 
 .banner-section.container-1200 {
-  margin: auto;
   flex-direction: row;
   width: 1200px;
-  margin-top: 16px;
+  margin: 16px auto 0;
 }
 
 .banner-menu {
   border-radius: 7px;
-
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .9);
 }
 
@@ -300,12 +308,12 @@ a {
 }
 
 .banner-menu-item {
-  display: flex;
   align-items: center;
+  display: flex;
   width: 254px;
   height: 42px;
-  line-height: 42px;
   padding: 0 10px;
+  line-height: 42px;
   border-radius: 7px;
   cursor: pointer;
 }
@@ -319,28 +327,24 @@ a {
   width: 75px;
   font-size: 15px;
   font-weight: 600;
+  color: #404040;
   text-align: left;
   line-height: 21px;
-  color: #404040;
 }
 
 .banner-menu-item .menu-item-content {
+  flex: 1;
   display: block;
   margin-left: 16px;
   font-size: 13px;
-  line-height: 18px;
   color: #353535;
-  text-align: left;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  line-height: 18px;
   text-align: left;
 }
 
 .banner-menu-item:hover .menu-item-title,
 .banner-menu-item:hover .menu-item-content {
   color: #fa8919;
-
 }
 
 .banner-swiper {
@@ -348,27 +352,21 @@ a {
   width: 638px;
   height: 312px;
   margin: 0 16px;
-  border-radius: 5px;
   overflow: hidden;
+  border-radius: 12px;
   cursor: pointer;
 }
 
-.banner-swiper:hover {}
-
 .banner-swiper .swiper-item-img {
   width: 100%;
-
 }
 
 .indicator-list {
   position: absolute;
   bottom: 14px;
   right: 15px;
-  width: 75px;
-  height: 5px;
   display: flex;
-
-  /* background-color: blue; */
+  height: 5px;
 }
 
 .indicator-item {
@@ -385,14 +383,13 @@ a {
 }
 
 .banner-user {
-  display: flex;
   flex-direction: column;
   align-items: center;
+  display: flex;
   width: 244px;
-  /* height: 290px; */
-  box-shadow: 0 1px 10px 0 rgba(140, 163, 191, .1);
   padding-top: 26px;
   padding-bottom: 22px;
+  box-shadow: 0 1px 10px 0 rgba(140, 163, 191, .1);
 }
 
 .banner-user-title {
@@ -402,7 +399,6 @@ a {
   color: #353535;
   line-height: 22px;
   text-align: center;
-
 }
 
 .banner-user-info {
@@ -414,9 +410,9 @@ a {
 }
 
 .banner-user-benefit {
+  justify-content: center;
   display: flex;
   padding-top: 6px;
-  justify-content: center;
 }
 
 .banner-user-benefit__img {
@@ -425,17 +421,17 @@ a {
 }
 
 .banner-user-login {
-  margin: 6px 0 4px;
   display: block;
-  text-align: center;
   width: 164px;
   height: 32px;
-  line-height: 32px;
+  margin: 6px 0 4px;
   font-size: 14px;
   font-weight: 500;
-  background-color: #fa8919;
   color: #fff;
+  line-height: 32px;
+  text-align: center;
   border-radius: 18px;
+  background-color: #fa8919;
   cursor: pointer;
 }
 
@@ -444,73 +440,72 @@ a {
 }
 
 .banner-user-download {
+  align-items: center;
   display: flex;
   height: 19px;
-  align-items: center;
   font-size: 12px;
   font-weight: 500;
   color: #fa8919;
   cursor: pointer;
+}
 
+.banner-user-download .arrow {
+  display: flex;
+  width: 9px;
+  transform: rotate(-90deg) scale(.5) translateX(-6px) translateY(4px);
 }
 
 .recommond-section {
-  margin: auto;
+  flex-direction: row;
+  justify-content: space-between;
+  display: flex;
   height: 78px;
-  margin-top: 16px;
+  margin: 16px auto 0;
   padding: 0 16px;
   box-sizing: border-box;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row;
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
 }
 
 .recommond-list {
   position: relative;
-  left: -1px;
-  display: flex;
   align-items: center;
+  display: flex;
+  left: -1px;
 }
 
 .recommond-item {
+  flex-direction: row;
+  align-items: center;
+  display: flex;
   height: 50px;
   margin-right: 18px;
-  display: flex;
-  align-items: center;
-  flex-direction: row;
   cursor: pointer;
 }
 
 .card-recommond-cover {
   display: flex;
-  border-radius: 5px;
   margin-right: 10px;
   overflow: hidden;
-  /* display: inline-block; */
+  border-radius: 5px;
 }
 
 .card-recommond-cover__img {
   width: 50px;
   height: 50px;
-  /* width: 100%; */
-  /* height: 100%;*/
-  /* margin-right: 10px; */
 }
 
 .card-recommond-right {
-  width: 144px;
-  display: flex;
   flex-direction: column;
-
+  display: flex;
+  width: 144px;
 }
 
 .card-recommond-title {
+  display: inline-block;
   font-size: 16px;
   font-weight: 500;
   color: #353535;
   line-height: 22px;
-  display: inline-block;
   transition: color .3s ease;
 }
 
@@ -519,26 +514,24 @@ a {
 }
 
 .card-recommond-desc {
-  /* width: 100px; */
+  display: inline-block;
   margin-top: 4px;
   font-size: 12px;
-  display: inline-block;
-
   color: #888;
   line-height: 17px;
 }
 
 .recommond-more {
   position: relative;
-  display: flex;
+  flex-direction: column;
   left: -2px;
+  display: flex;
   height: 44px;
   padding: 5px 0 0 15px;
   margin-top: 17px;
-  border-left: 1px solid hsla(0, 0%, 91%, .6);
   box-sizing: border-box;
+  border-left: 1px solid hsla(0, 0%, 91%, .6);
   cursor: pointer;
-  flex-direction: column;
 }
 
 .recommond-link {
@@ -573,9 +566,9 @@ a {
   display: block;
   width: 282px;
   height: 242px;
-  border-radius: 8px;
-  overflow: hidden;
   margin-right: 24px;
+  overflow: hidden;
+  border-radius: 8px;
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
 }
 
@@ -604,15 +597,15 @@ a {
 
 .schedule-live-item__cover--shadow {
   position: absolute;
-  display: flex;
+  top: 0;
+  z-index: 10;
   align-items: center;
   justify-content: center;
-  top: 0;
-  opacity: 0;
-  z-index: 10;
-  height: 159px;
+  display: flex;
   width: 282px;
+  height: 159px;
   background-color: rgba(0, 0, 0, .2);
+  opacity: 0;
   transition: opacity .3s ease;
 }
 
@@ -621,9 +614,9 @@ a {
 }
 
 .icon-play-container {
-  display: flex;
   align-items: center;
   justify-content: center;
+  display: flex;
   width: 43px;
   height: 43px;
   color: #fff;
@@ -635,23 +628,21 @@ a {
   display: block;
   width: 22px;
   height: 22px;
-  background-image: url(../img/icon-play.svg);
-  background-size: 22px;
-  background-repeat: no-repeat;
+  background: url(../img/icon-play.svg) no-repeat 0 0/22px;
 }
 
 .schedule-live-item__status {
   position: absolute;
   top: 8px;
   right: 8px;
-  padding: 0 5px;
-  height: 19px;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 19px;
+  padding: 0 5px;
   font-size: 12px;
   font-weight: 500;
-  border-radius: 4px;
   color: #7e521a;
+  border-radius: 4px;
   background: linear-gradient(180deg, #feeccf, #e9c07f);
 }
 
@@ -664,7 +655,6 @@ a {
   font-weight: 500;
   color: #404040;
   line-height: 24px;
-  /* cursor: pointer; */
   transition: color .2s ease;
 }
 
@@ -672,8 +662,8 @@ a {
   margin-top: 7px;
   font-size: 15px;
   font-weight: 400;
-  line-height: 21px;
   color: #888;
+  line-height: 21px;
 }
 
 .schedule-lastest-cover {
@@ -681,11 +671,9 @@ a {
   width: 282px;
   height: 242px;
   margin-top: 16px;
-  background-image: url(../img/live-11month.webp);
   border-radius: 8px;
-  background-size: 282px 242px;
-
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
+  background: url(../img/live-11month.webp) no-repeat 0 0/282px 242px;
 }
 
 .schedule-lastest-cover:hover {
@@ -693,38 +681,32 @@ a {
 }
 
 .hot-section {
+  display: flex;
   width: 1200px;
   margin: 60px auto 0px;
-  display: flex;
 }
 
 .hot-learning-header {
-  display: flex;
   align-items: center;
-  width: 894px;
   justify-content: space-between;
+  display: flex;
+  width: 894px;
 }
 
 .icon-hot::after {
   content: "";
-  width: 34px;
-  height: 16px;
-
-  display: block;
   position: absolute;
   top: -7px;
   right: -34px;
-  background-image: url(../img/icon-hot1.png);
-  background-repeat: no-repeat;
-  background-size: 34px 16px;
-  /* overflow-clip-margin: content-box; */
+  display: block;
+  width: 34px;
+  height: 16px;
+  background: url(../img/icon-hot1.png) no-repeat 0 0/ 34px 16px;
 }
 
-
-
 .hot-learning-title {
-  line-height: 30px;
   display: flex;
+  line-height: 30px;
 }
 
 .hot-learning-title__text.font-module-title {
@@ -739,13 +721,13 @@ a {
   display: inline-block;
   font-size: 18px;
   color: #888;
-  cursor: pointer;
   line-height: 30px;
+  cursor: pointer;
 }
 
 .hot-learning-preference {
-  display: flex;
   align-items: center;
+  display: flex;
   padding: 5px 12px 4px 9px;
   border: 2px solid #fffefb;
   border-radius: 19px;
@@ -760,9 +742,9 @@ a {
 
 .hot-learning-preference__text {
   margin-left: 6px;
-  line-height: 21px;
   font-size: 15px;
   font-weight: 500;
+  line-height: 21px;
   color: #fa8919;
 }
 
@@ -770,13 +752,11 @@ a {
   display: inline-block;
   width: 16px;
   height: 16px;
-  background-image: url(../img/icon-pen.png);
-  background-repeat: no-repeat;
-  background-size: 16px;
+  background: url(../img/icon-pen.png) no-repeat 0 0/16px;
 }
 
 .hot-learning-list {
-  /* 问题,这里不设置的话,宽度是如何确定的 */
+  /* 问题,这里不设置宽度的话,宽度该如何确定 */
   width: 894px;
   margin-top: 16px;
   display: flex;
@@ -807,9 +787,7 @@ a {
 .hot-learning-item__cover {
   width: 115px;
   height: 152px;
-  background-image: url(../img/teacher-lxb.webp);
-  background-repeat: no-repeat;
-  background-size: 115px 152px;
+  background: url(../img/teacher-lxb.webp) no-repeat 0 0/115px 152px;
   border-radius: 6px;
   transform: opacity .2s ease;
 }
@@ -843,17 +821,14 @@ a {
 .learning-item-teacher__name,
 .learning-item-teacher__about {
   display: inline-block;
-  height: 26px;
   max-width: 134px;
+  height: 26px;
+  padding: 0 8px;
   font-size: 16px;
   line-height: 26px;
-  padding: 0 8px;
-  border-radius: 3px;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   color: #888;
   background-color: #f2f3f6;
+  border-radius: 3px;
 }
 
 .learning-item-teacher__about {
@@ -863,20 +838,20 @@ a {
 .learning-item-about {
   margin-top: 9px;
   font-size: 16px;
-  color: #b2b2b2;
-  line-height: 22px;
   font-weight: 400;
+  line-height: 22px;
+  color: #b2b2b2;
 }
 
 .learning-item-price {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-top: 31px;
 }
 
 .learning-item-price__img {
-  height: 17px;
   display: flex;
+  height: 17px;
   margin-right: 6px;
 }
 
@@ -886,26 +861,24 @@ a {
 
 .learning-item-price .learning-item-price__current {
   margin-right: 8px;
-  color: #fa8919;
-  line-height: 26px;
-  font-weight: 500;
   font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+  color: #fa8919;
 }
 
 .learning-item-price__original {
   display: flex;
+  font-size: 15px;
   font-weight: 400;
   /*  问题,原网站为25px,是如何也可以保持局中的? */
   line-height: 26px;
   color: #b2b2b2;
-  font-size: 15px;
 }
 
-
-
 .hot-hotsale {
-  margin-left: 24px;
   height: 458px;
+  margin-left: 24px;
 }
 
 .hot-hotsale-title {
@@ -924,24 +897,23 @@ a {
 
 .hot-hotsale-subtitle {
   position: relative;
-  display: flex;
   align-items: center;
+  display: flex;
   width: 264px;
   height: 58px;
   padding-left: 19px;
-  border-radius: 6px 6px 0 0;
-  /* 图片源 重复 位置*2/长 宽 */
-  background: url(../img/bg-hotsale.webp) no-repeat 0 0 /100% auto;
-  background-size: cover;
+  background: url(../img/bg-hotsale.webp) no-repeat 0 0 /cover;
   box-sizing: border-box;
+  border-radius: 6px 6px 0 0;
 }
 
 .hot-hotsale-subtitle__text {
   font-size: 19px;
   font-weight: 500;
-  color: #bd5c5e;
-  line-height: 1.35;
+  /* 问题，原来设定的字体继承失败 */
   font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  line-height: 1.35;
+  color: #bd5c5e;
 }
 
 .hot-hotsale-subtitle__img {
@@ -958,17 +930,16 @@ a {
 }
 
 .hot-hotsale-item {
-  display: flex;
   align-items: center;
-  /* justify-content: space-between; */
+  display: flex;
   padding: 5px 0;
 }
 
 .hot-hotsale-item__num {
   height: 34px;
   font-size: 23px;
-  font-family: DINCondensed-Bold, DINCondensed;
   font-weight: 700;
+  font-family: DINCondensed-Bold, DINCondensed;
   color: #b2b2b2;
 }
 
@@ -989,9 +960,6 @@ a {
   margin-left: 18px;
   font-size: 16px;
   color: #404040;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   transition: color .2s ease;
   cursor: pointer;
 }
@@ -1027,9 +995,6 @@ a {
   line-height: 22px;
   color: #404040;
   transition: color .2s ease;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .learnpath-section .desc {
@@ -1092,8 +1057,8 @@ a {
   right: -4px;
   width: 32px;
   height: 32px;
-  border-radius: 5px;
   background-color: #e8e8e8;
+  border-radius: 5px;
 }
 
 .learnpath-item-cover__img {
@@ -1113,9 +1078,9 @@ a {
   width: 14px;
   height: 36px;
   color: #888;
+  background-color: #f6f7fb;
   border-radius: 7px;
   cursor: pointer;
-  background-color: #f6f7fb;
 }
 
 .learnpath-list-container__prev {
@@ -1124,7 +1089,6 @@ a {
 
 .learnpath-list-container__next {
   right: 8px;
-  /* background-color: #f6f7fb; */
 }
 
 .learnpath-list-container__prev .arrow {
@@ -1148,14 +1112,9 @@ a {
   margin: 60px auto 36px;
 }
 
-.campus-salary {
-  /* 问题, */
-  /* flex: 1; */
-}
-
 .campus-salary-header {
-  display: flex;
   justify-content: space-between;
+  display: flex;
 }
 
 .campus-salary-title {
@@ -1171,16 +1130,16 @@ a {
 .campus-salary-benefit {
   position: relative;
   top: 7px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   display: flex;
   width: 130px;
   height: 38px;
-  box-sizing: border-box;
   padding: 0 10px;
-  border-radius: 35px;
+  box-sizing: border-box;
   background: linear-gradient(180deg, #fbf5ee, #fffbf7);
   border: 2px solid hsla(0, 0%, 100%, .9);
+  border-radius: 35px;
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
   cursor: pointer;
 }
@@ -1192,28 +1151,25 @@ a {
 }
 
 .campus-salary-benefit__text {
-  color: #fa8919;
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
+  color: #fa8919;
 }
 
 .campus-salary-body {
   display: flex;
   flex-wrap: wrap;
   margin-top: 16px;
-
 }
 
 .campus-salary-item {
-  /* align-items: center; */
   display: flex;
   width: 435px;
   height: 180px;
-  box-sizing: border-box;
   padding: 16px 12px 0 18px;
   margin-bottom: 24px;
-  /* margin-bottom: 24px; */
+  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 4px 30px rgba(238, 242, 245, .8);
   border-radius: 8px;
@@ -1251,15 +1207,15 @@ a {
   position: absolute;
   top: -7px;
   left: 8px;
-  display: flex;
   justify-content: center;
+  display: flex;
   width: 30px;
   height: 32px;
   font-size: 18px;
-  color: #fff;
   font-family: DINAlternateBold, sans-serif;
-  text-align: center;
   line-height: 32px;
+  color: #fff;
+  text-align: center;
   background: url(../img/icon-bg-num1.webp) no-repeat 0 0/30px 32px;
 }
 
@@ -1283,32 +1239,32 @@ a {
 .campus-salary .card-campus-title {
   font-size: 20px;
   font-weight: 500;
-  color: #4c4c4c;
   line-height: 24px;
+  color: #4c4c4c;
   transition: color .2s ease;
 }
 
 .campus-salary .card-campus-desc {
   height: 22px;
-  line-height: 22px;
   padding-top: 8px;
   font-size: 16px;
+  line-height: 22px;
   color: #888;
 }
 
 .card-campus-author {
   height: 22px;
-  line-height: 22px;
-  font-size: 16px;
   padding-top: 6px;
+  font-size: 16px;
+  line-height: 22px;
   color: #b2b2b2;
 }
 
 .card-campus-info {
+  align-items: center;
+  justify-content: space-between;
   display: flex;
   padding-top: 40px;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .card-campus-info__time {
@@ -1320,13 +1276,12 @@ a {
 .card-campus-info__btn {
   height: 28px;
   padding: 0 18px;
-  border-radius: 14px;
   font-size: 16px;
   font-weight: 500;
-  color: #fa8919;
   line-height: 28px;
+  color: #fa8919;
   background-color: #fbf5ee;
-
+  border-radius: 14px;
 }
 
 .campus-trial {
@@ -1335,26 +1290,25 @@ a {
 
 .campus-trial-body {
   margin-top: 16px;
-  /* display: flex; */
 }
 
 .campus-trial-item {
   position: relative;
   width: 282px;
+  padding: 9px;
   margin-bottom: 15px;
+  box-sizing: border-box;
   background-color: #fff;
   box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
   border-radius: 8px;
-  padding: 9px;
-  box-sizing: border-box;
   transition: box-shadow .2s linear;
   cursor: pointer;
 }
 
 .campus-trial-container {
+  padding: 10px 55px 8px 12px;
   background-color: red;
   background: url(../img/trial-bg-red.webp) no-repeat 0 0/264px 100px;
-  padding: 10px 55px 8px 12px;
   border-radius: 5px;
 }
 
@@ -1364,14 +1318,14 @@ a {
 
 .campus-trial-container.green {
   background: url(../img/trial-bg-green.webp) no-repeat 0 0/264px 100px;
-
 }
 
 .campus-trial-container::after {
+  content: "";
   position: absolute;
   top: 9px;
   right: 9px;
-  content: "";
+
   width: 38px;
   height: 15px;
   background: url(../img/icon-trial.png) no-repeat 0 0/38px 15px;
@@ -1386,37 +1340,37 @@ a {
 .campus-trial .card-campus-title {
   font-size: 16px;
   font-weight: 500;
-  color: #353535;
   line-height: 21px;
+  color: #353535;
   transition: coloe .2s ease;
 }
 
 .campus-trial .card-campus-desc {
   margin-top: 5px;
   font-size: 12px;
-  color: #888;
   line-height: 17px;
+  color: #888;
 }
 
 .card-campus-price {
-  display: flex;
   align-items: baseline;
+  display: flex;
   margin-top: 12px;
 }
 
 .card-campus-price__current {
   font-size: 16px;
   font-weight: 500;
-  color: #fa8919;
   line-height: 26px;
+  color: #fa8919;
 }
 
 .card-campus-price__original {
+  display: flex;
   margin-left: 4px;
   font-size: 12px;
-  color: #b2b2b2;
   line-height: 25px;
-  display: flex;
+  color: #b2b2b2;
 }
 
 .opencourse-section {
@@ -1424,19 +1378,19 @@ a {
 }
 
 .opencourse-title {
-  align-items: center;
   display: flex;
+  align-items: center;
 }
 
 .opencourse-title__arrow,
 .campus-salary-title__arrow,
 .mall-title__arrow {
-  margin-left: 6px;
+  display: flex;
   width: 20px;
   height: 20px;
+  margin-left: 6px;
   background-color: #f7f7fb;
   border-radius: 50%;
-  display: flex;
 }
 
 .opencourse-title__arrow .arrow,
@@ -1449,14 +1403,13 @@ a {
 .opencourse-body {
   margin-top: 16px;
   display: flex;
-
 }
 
 .opencourse-item {
-  box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
-  transition: all .2s ease;
   width: 282px;
   height: 276px;
+  box-shadow: 0 4px 30px 0 rgba(238, 242, 245, .8);
+  transition: all .2s ease;
 }
 
 .opencourse-item:not(:last-child) {
@@ -1493,14 +1446,14 @@ a {
 .opencourse-item__intro-desc {
   margin-top: 4px;
   font-size: 15px;
+  line-height: 22px;
   color: #888;
-  line-height: 22px
 }
 
 .opencourse-item-about {
-  display: flex;
   align-items: center;
   justify-content: space-between;
+  display: flex;
   margin: 16px 12px 0 10px;
 }
 
@@ -1517,40 +1470,40 @@ a {
   width: 92px;
   height: 28px;
   padding: 0 10px;
-  border-radius: 14px;
+  box-sizing: border-box;
   font-size: 14px;
   font-weight: 500;
-  box-sizing: border-box;
-  color: #fa8919;
   line-height: 20px;
+  color: #fa8919;
   background-color: #fbf5ee;
+  border-radius: 14px;
 }
 
 .mall-section {
-  margin-top: 60px;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .mall-title {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .mall-list {
-  margin-top: 16px;
   display: flex;
+  margin-top: 16px;
 }
 
 .mall-item {
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   display: flex;
   width: 386px;
   height: 125px;
-  border-radius: 8px;
-  box-sizing: border-box;
   padding: 13px 16px 15px 18px;
   margin-right: 24px;
+  box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .mall-item:last-child {
@@ -1580,27 +1533,25 @@ a {
 
 
 .mall-item-desc {
-  margin-top: 4px;
   width: 210px;
+  margin-top: 4px;
   font-size: 14px;
-  color: #888;
   line-height: 20px;
+  color: #888;
 }
 
 .mall-item-price {
   margin-top: 20px;
   font-size: 18px;
   font-weight: 500;
-  color: #fa8919;
   line-height: 26px;
+  color: #fa8919;
 }
 
 .mall-item-cover {
+  display: flex;
   width: 118px;
   height: 118px;
-  display: flex;
-  /* align-items: center; */
-  /* justify-content: center; */
 }
 
 .mall-item-cover__img {
@@ -1609,15 +1560,13 @@ a {
   bottom: -1px;
   width: 100%;
   height: 100%;
+  /* 问题，该属性的适用 */
   object-fit: contain;
-  /* object-position: right center; */
-  /* overflow-clip-margin: content-box; */
-  /* overflow: clip; */
 }
 
 .activity-section {
-  margin-top: 60px;
   flex-direction: column;
+  margin-top: 60px;
 }
 
 .activity-list {
@@ -1645,22 +1594,22 @@ a {
 .footer-title {
   font-size: 18px;
   font-weight: 500;
-  color: #6c7684;
   line-height: 16px;
+  color: #6c7684;
 }
 
 .footer-txt {
   display: block;
+  margin-bottom: 18px;
   font-size: 12px;
   font-weight: 500;
-  color: #6c7684;
   line-height: 17px;
-  margin-bottom: 18px;
+  color: #6c7684;
 }
 
 .footer-link {
-  cursor: pointer;
   transition: color .2s ease;
+  cursor: pointer;
 }
 
 .footer-link:hover {
@@ -1673,25 +1622,26 @@ a {
 }
 
 .footer-top {
-  height: 178px;
   display: flex;
+  height: 178px;
 }
 
 .footer-bottom {
   text-align: center;
 }
 
-.footer-geektime{
+.footer-geektime {
   margin-top: -5px;
 }
+
 .footer-geektime-logo-img {
   width: 173px;
   height: 42px;
 }
 
 .footer-geektime-container {
-  margin-top: 30px;
   padding-left: 40px;
+  margin-top: 30px;
 }
 
 .footer-contact {
@@ -1719,13 +1669,13 @@ a {
 .footer-focus-qrcode {
   align-items: center;
   justify-content: center;
-  margin-top: 13px;
   display: flex;
   width: 65px;
   height: 65px;
+  margin-top: 13px;
   box-sizing: border-box;
-  border-radius: 6px;
   border: 1px solid #f2f2f2;
+  border-radius: 6px;
 }
 
 .footer-focus-qrcode-img {
@@ -1736,26 +1686,25 @@ a {
 .footer-focus-info {
   margin-top: 30px;
   margin-left: 7px;
-  color: #6c7684;
-  line-height: 17px;
   font-size: 12px;
+  line-height: 17px;
+  color: #6c7684;
 }
 
-.footer-bottom{
+.footer-bottom {
   justify-content: center;
-  margin-top: 10px;
   display: flex;
+  margin-top: 10px;
 }
 
 .footer-bottom,
 .footer-bottom-content__link {
   font-size: 12px;
-  color: #b2b2b2;
   line-height: 18px;
+  color: #b2b2b2;
 }
 
 .footer-bottom-content {
-  /* display: inline-block; */
   display: inline-flex;
   margin-left: 14px;
 }
