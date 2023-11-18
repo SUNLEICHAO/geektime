@@ -116,7 +116,7 @@ a {
 }
 
 .header-nav {
-  /* 问题，这里需要手动下移，因为原上14下15，而我是上15下14 */
+  /* 问题，原：上14下15，而当前是上15下14，需要手动下移 */
   position: relative;
   top: -1px;
   align-items: center;
@@ -756,7 +756,7 @@ a {
 }
 
 .hot-learning-list {
-  /* 问题,这里不设置宽度的话,宽度该如何确定 */
+  /* 问题，这里不设置宽度的话,宽度该如何确定 */
   width: 894px;
   margin-top: 16px;
   display: flex;
@@ -1123,7 +1123,8 @@ a {
 }
 
 .campus-salary-title__text,
-.campus-salary-title {
+.campus-salary-title,
+.trial-title {
   font-family: PingFang SC, Helvetica Neue, Verdana, Microsoft Yahei, Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
 }
 
@@ -1288,11 +1289,11 @@ a {
   margin-left: 24px;
 }
 
-.campus-trial-body {
+.trial-list {
   margin-top: 16px;
 }
 
-.campus-trial-item {
+.trial-item {
   position: relative;
   width: 282px;
   padding: 9px;
@@ -1305,22 +1306,22 @@ a {
   cursor: pointer;
 }
 
-.campus-trial-container {
+.trial-item-container {
   padding: 10px 55px 8px 12px;
   background-color: red;
   background: url(../img/trial-bg-red.webp) no-repeat 0 0/264px 100px;
   border-radius: 5px;
 }
 
-.campus-trial-container.blue {
+.trial-item-container.blue {
   background: url(../img/trial-bg-blue.webp) no-repeat 0 0/264px 100px;
 }
 
-.campus-trial-container.green {
+.trial-item-container.green {
   background: url(../img/trial-bg-green.webp) no-repeat 0 0/264px 100px;
 }
 
-.campus-trial-container::after {
+.trial-item-container::after {
   content: "";
   position: absolute;
   top: 9px;
@@ -1337,7 +1338,7 @@ a {
   display: none;
 }
 
-.campus-trial .card-campus-title {
+.campus-trial .trial-item-title{
   font-size: 16px;
   font-weight: 500;
   line-height: 21px;
@@ -1345,27 +1346,27 @@ a {
   transition: coloe .2s ease;
 }
 
-.campus-trial .card-campus-desc {
+.campus-trial .trial-item-desc {
   margin-top: 5px;
   font-size: 12px;
   line-height: 17px;
   color: #888;
 }
 
-.card-campus-price {
+.trial-item-price {
   align-items: baseline;
   display: flex;
   margin-top: 12px;
 }
 
-.card-campus-price__current {
+.trial-item-price__current {
   font-size: 16px;
   font-weight: 500;
   line-height: 26px;
   color: #fa8919;
 }
 
-.card-campus-price__original {
+.trial-item-price__original {
   display: flex;
   margin-left: 4px;
   font-size: 12px;
